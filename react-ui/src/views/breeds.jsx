@@ -1,7 +1,6 @@
 import React, { useState }from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectBreeds } from '../features/breedsSlice';
-import { selectSelectedBreeds } from '../features/selectedBreedsSlice'
 import { addSelectBreedsToStore } from '../features/selectedBreedsSlice';
 
 
@@ -12,13 +11,13 @@ const Breeds = () => {
 
   const handleClick = e => {
     const value = e.target.dataset.breed;
+    let _selectedBreeds = [];
     if (selectedBreeds.indexOf(value) > -1 ) {
-      const _selectedBreeds = selectedBreeds.filter(breed => breed !==value)
-      setSelectedBreeds(_selectedBreeds);
+      _selectedBreeds = selectedBreeds.filter(breed => breed !==value)
     } else {
-      const  _selectedBreeds = [...selectedBreeds, value]; //spread syntax
-      setSelectedBreeds(_selectedBreeds);
+      _selectedBreeds = [...selectedBreeds, value]; //spread syntax
     }
+    setSelectedBreeds(_selectedBreeds);
   };
 
   const handleSelectedBreeds = () => {

@@ -5,6 +5,6 @@ import selectedBreedsReducer from '../features/selectedBreedsSlice';
 export default configureStore({
   reducer: {
     breeds: breedsReducer,
-    selectedBreeds: selectedBreedsReducer
+    selectedBreeds: selectedBreedsReducer,
   }
 });
