@@ -17,7 +17,11 @@ const Breeds = () => {
       const  _selectedBreeds = [...selectedBreeds, value]; //spread syntax
       setSelectedBreeds(_selectedBreeds);
     }
-  }
+  };
+
+  const handleSelectedBreeds = () => {
+    console.log(selectedBreeds)
+  };
 
   const breeds = data && data.map(breed => {
     return (
@@ -34,7 +38,14 @@ const Breeds = () => {
 
   return (
     <>
-    <h1>Breeds</h1>
+    <div className='breeds-subheader'>
+      <h1>Breeds</h1>
+      {selectedBreeds.length > 0 &&  (
+        <button onClick={handleSelectedBreeds}>
+          Add Selection to Favorites? 
+        </button>
+      )}
+    </div>
     <ul className="breeds">{breeds}</ul>
     
     </>

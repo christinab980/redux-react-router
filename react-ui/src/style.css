@@ -10,6 +10,19 @@ html {
   height: 100%;
 }
 
+.breeds-subheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.breeds-subheader button {
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0 18px;
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
 .breeds li{
   background-color: aliceblue;
   text-align: center;
@@ -24,6 +37,7 @@ html {
 }
 
 ul {
+  margin-top: 20px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
