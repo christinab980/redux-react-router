@@ -24,6 +24,7 @@ html {
 }
 
 .breeds li{
+  text-transform: capitalize;
   background-color: aliceblue;
   text-align: center;
   cursor: pointer;
