@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// import { builder } from 'vite';
 
 export const fetchBreeds = createAsyncThunk('breeds/all', async() => {
   const response = await fetch('https://dog.ceo/api/breeds/list/all');

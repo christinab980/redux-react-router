@@ -25,8 +25,9 @@ const Breeds = () => {
 
   return (
     <>
+    {JSON.stringify(selectedBreeds)}
     <h1>Breeds</h1>
-    <ui>{breeds}</ui>
+    <ul>{breeds}</ul>
     
     </>
   )
