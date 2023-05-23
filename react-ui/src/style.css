@@ -10,6 +10,27 @@ html {
   height: 100%;
 }
 
+.breeds li{
+  background-color: aliceblue;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 30px;
+  width: 150px;
+}
+
+.breeds li.active {
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
 .root {
   display: flex;
   flex-direction: column;

@@ -20,14 +20,22 @@ const Breeds = () => {
   }
 
   const breeds = data && data.map(breed => {
-    return <li data-breed={breed} key={breed} onClick={(handleClick)}>{breed}</li>
-  }) 
+    return (
+    <li 
+    className={selectedBreeds.indexOf(breed) > -1 ? 'active' : " "}
+    data-breed={breed} 
+    key={breed} 
+    onClick={(handleClick)}
+    >
+      {breed}
+    </li>
+  )  
+}) 
 
   return (
     <>
-    {JSON.stringify(selectedBreeds)}
     <h1>Breeds</h1>
-    <ul>{breeds}</ul>
+    <ul className="breeds">{breeds}</ul>
     
     </>
   )
