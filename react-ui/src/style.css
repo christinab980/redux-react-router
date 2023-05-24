@@ -37,6 +37,19 @@ html {
   color: aliceblue;
 }
 
+.dog-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dog-imgs img {
+  height: 180px;
+  width: 180px;
+  cursor: pointer;
+}
+
 ul {
   margin-top: 20px;
   list-style-type: none;
