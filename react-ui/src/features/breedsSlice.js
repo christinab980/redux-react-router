@@ -18,8 +18,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const fetchBreeds = createAsyncThunk('breeds/all', async() => {
   const response = await fetch('https://dog.ceo/api/breeds/list/all');
   const data = await response.json();
-  const allBreeds = findAllBreeds(data.message)
-  console.log(allBreeds)
+  // const allBreeds = findAllBreeds(data.message)
+  // console.log(allBreeds)
   const breeds = Object.keys(data.message)
   return breeds
 })
