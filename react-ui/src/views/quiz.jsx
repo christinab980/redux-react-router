@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 const Quiz = () => {
   const [options, setOptions] = useState([]);
   const [answer, setAnswer] = useState([]);
-  // const [breeds, setBreeds] = useState([]);
   const [randomBreed, setRandomBreed] = useState("");
   const [feedback, setFeedback] = useState("");
 
@@ -56,6 +55,5 @@ const Quiz = () => {
     </>
   )
 }
-
 
 export default Quiz;
