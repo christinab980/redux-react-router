@@ -45,9 +45,17 @@ html {
 }
 
 .dog-imgs img {
+  border-radius: 10px;
   height: 180px;
   width: 180px;
   cursor: pointer;
+}
+
+.question {
+  text-align: center;
+  margin: 20px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
 }
 
 ul {

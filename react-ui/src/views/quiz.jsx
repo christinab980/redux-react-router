@@ -4,7 +4,8 @@ const Quiz = () => {
   const [options, setOptions] = useState([]);
   const [answer, setAnswer] = useState([]);
   // const [breeds, setBreeds] = useState([]);
-  const [randomBreed, setRandomBreed] = useState("")
+  const [randomBreed, setRandomBreed] = useState("");
+  const [feedback, setFeedback] = useState("");
 
   let breeds = []
 
@@ -29,10 +30,19 @@ const Quiz = () => {
   })
 }, []);
 
+  const handleClick = (e) => {
+    const breed = e.target.getAttribute('data-breed')
+    const correctMessage = "Yay! That was CORRECT"
+    const wrongMessage = "Bummer! Wrong Answer"
+    if(randomBreed === breed) {
+      setFeedback(correctMessage)
+    } else setFeedback(wrongMessage)
+  }
+
   const images = options.map((option) => {
     return (
     <div key={option}> 
-    <img src={option} alt="dog img"/>
+    <img onClick={handleClick} src={option} data-breed={option.split("/")[4]} alt="dog img"/>
     </div>
     )
   })
@@ -42,6 +52,7 @@ const Quiz = () => {
     <h1>Quiz</h1>
     <div className='question'> Which image is {randomBreed} breed? </div>
     <div className='dog-imgs'> {images} </div>
+    <div className='feedback'> {feedback} </div>
     </>
   )
 }
